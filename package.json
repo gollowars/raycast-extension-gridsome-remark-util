@@ -1,0 +1,70 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "raycast-extension-gridsome-remark-util",
+  "title": "Grid Remark",
+  "description": "",
+  "icon": "command-icon.png",
+  "author": "gollowars",
+  "license": "MIT",
+  "preferences": [
+    {
+      "name": "projectDir",
+      "description": "project directory",
+      "type": "textfield",
+      "required": true,
+      "title": "path",
+      "placeholder": "~/gridsomeproject/"
+    },
+    {
+      "name": "markdownBaseDir",
+      "description": "markdown directory",
+      "type": "textfield",
+      "required": true,
+      "title": "path",
+      "placeholder": "contents"
+    }
+  ],
+  "commands": [
+    {
+      "name": "search",
+      "title": "Search",
+      "description": "Search Articles",
+      "mode": "view"
+    },
+    {
+      "name": "create",
+      "title": "Create",
+      "description": "Create a article",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.43.2",
+    "@types/expand-tilde": "^2.0.0",
+    "@types/glob": "^8.0.0",
+    "@types/react-datepicker": "^4.8.0",
+    "date-fns": "^2.29.3",
+    "expand-tilde": "^2.0.2",
+    "fs-extra": "^10.1.0",
+    "glob": "^8.0.3",
+    "got": "^12.5.2",
+    "react-datepicker": "^4.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.8.3",
+    "@types/react": "18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "ray publish"
+  }
+}
