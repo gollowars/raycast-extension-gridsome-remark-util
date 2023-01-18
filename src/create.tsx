@@ -66,7 +66,7 @@ export default function Create() {
 
     const tagstr = tags
       .map((key) => {
-        return `    - ${key.trim()}`;
+        return `  - ${key.trim()}`;
       })
       .join("\n");
 
@@ -81,7 +81,7 @@ date: ${values.date}
 meta:
   keywords: ${keywords}
   description: ${description}
-  tags:
+tags:
 ${tagstr}
 ---
 # ${values.title}
