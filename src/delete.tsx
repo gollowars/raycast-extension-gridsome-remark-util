@@ -21,7 +21,7 @@ import path from "path";
 import expandTilde from "expand-tilde";
 import glob, { Glob, GlobSync } from "glob";
 
-import { getContentDir, openFileAndFinish, Preferences } from "./utility";
+import { getContentDir, trashFileAndFinish, Preferences } from "./utility";
 
 export default function Command() {
   const contentsDir = getContentDir();
@@ -41,14 +41,14 @@ export default function Command() {
 
   const selectFileHandler = async (file: string) => {
     const filepath = path.join(contentsDir, file);
-    openFileAndFinish(filepath);
+    trashFileAndFinish(filepath);
   };
 
   return (
     <List
       filtering={false}
-      navigationTitle="Delete Articles"
-      searchBarPlaceholder="Delete your articles"
+      navigationTitle="Search Articles"
+      searchBarPlaceholder="Search your articles"
       searchText={searchText}
       onSearchTextChange={setSearchText}
     >
@@ -58,7 +58,7 @@ export default function Command() {
           title={file}
           actions={
             <ActionPanel>
-              <Action title="Delete" onAction={() => selectFileHandler(file)} />
+              <Action title="Select" onAction={() => selectFileHandler(file)} />
             </ActionPanel>
           }
         ></List.Item>

@@ -36,6 +36,12 @@
       "title": "Create",
       "description": "Create a article",
       "mode": "view"
+    },
+    {
+      "name": "delete",
+      "title": "Delete",
+      "description": "Delete a article",
+      "mode": "view"
     }
   ],
   "dependencies": {
